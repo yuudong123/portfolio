@@ -1,0 +1,91 @@
+/* Header, Footer */
+ul,
+ol {
+  list-style: none;
+}
+.item-header-menu,
+footer a {
+  color: black;
+  text-decoration-line: none;
+}
+.item-header-menu:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+footer a:hover {
+  color: black;
+  text-decoration-line: none;
+}
+header::after {
+  display: block;
+  background: rgb(217, 217, 217);
+  content: "";
+  width: 100%;
+  height: 1px;
+}
+#gnb,
+#etc {
+  column-gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+#gnb li,
+#etc li {
+  position: relative;
+  display: inline;
+}
+#etc input {
+  margin: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  line-height: 100%;
+}
+#etc button {
+  background: none;
+  width: 60px;
+  padding: 0;
+  border: none;
+}
+#bar {
+  background: rgb(217, 217, 217);
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  transition: all 0.3s;
+  position: absolute;
+}
+#bar {
+  left: 50%;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+  top: 0;
+}
+/* Header */
+
+.bg-default {
+  background: rgb(172, 172, 172);
+}
+
+/* 부트스트랩 container 최대폭 늘리기 */
+/* 부트스트랩5에서 1400px 크기를 지원하지만, 4버전에서도 충분히 늘려줄수 있음 */
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .row-search,
+  .row-header {
+    height: 100px;
+  }
+}
+
+body {
+  background-color: rgb(190, 190, 190);
+}
