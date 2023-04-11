@@ -94,8 +94,8 @@ $(function () {
         request.onsuccess = (event) => {
           const db = event.target.result;
           const transaction = db.transaction("myObjectStore", "readwrite");
-          const objectStore = transaction.objectStore("myObjectStore");
-          const countRequest = objectStore.count();
+          const Store = transaction.objectStore("myObjectStore");
+          const countRequest = Store.count();
           countRequest.onsuccess = () => {
             const id = countRequest.result + 1;
 
@@ -107,7 +107,7 @@ $(function () {
               input: cntInputVal,
             };
 
-            const addRequest = objectStore.add(data);
+            const addRequest = Store.add(data);
 
             addRequest.onsuccess = () => {
               const confirmed = confirm("Download as image?");
