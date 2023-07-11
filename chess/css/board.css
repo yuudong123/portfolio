@@ -1,0 +1,39 @@
+#board-outer {
+  position: relative;
+  min-width: 320px;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+#board-outer:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cell {
+  width: 12.5%;
+  height: 12.5%;
+  background-color: rgb(255, 246, 233);
+}
+
+.r1:nth-child(2n-1),
+.r2:nth-child(2n),
+.r3:nth-child(2n-1),
+.r4:nth-child(2n),
+.r5:nth-child(2n-1),
+.r6:nth-child(2n),
+.r7:nth-child(2n-1),
+.r8:nth-child(2n) {
+  background-color: rgb(255, 214, 160);
+}
